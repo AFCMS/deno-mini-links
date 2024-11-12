@@ -1,10 +1,8 @@
 import * as kvOauth from "jsr:@deno/kv-oauth";
 
-const mainURL = Deno.env.get("DML_MAIN_URL");
+// const mainURL = Deno.env.get("DML_MAIN_URL");
 
-const ghConfig = kvOauth.createGitHubOAuthConfig({
-  redirectUri: `${mainURL}/oauth/github`,
-});
+const ghConfig = kvOauth.createGitHubOAuthConfig();
 
 const ghHelpers = kvOauth.createHelpers(ghConfig);
 
