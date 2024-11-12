@@ -1,6 +1,9 @@
 {
   "tasks": {
-    "dev": "deno run --allow-net=0.0.0.0:8000 --watch main.ts"
+    "dev": "deno run --allow-net=0.0.0.0:8000 --allow-env=GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET --watch main.ts"
+  },
+  "imports": {
+    "@deno/kv-oauth": "jsr:@deno/kv-oauth@^0.11.0"
   },
   "unstable": [
     "kv"
